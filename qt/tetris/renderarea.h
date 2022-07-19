@@ -1,6 +1,7 @@
 #ifndef RENDERAREA_H
 #define RENDERAREA_H
 
+#include"global_constants.h"
 #include"tmatrix.h"
 
 #include<iostream>
@@ -13,20 +14,20 @@
 
 class RenderArea : public QWidget
 {
-		Q_OBJECT
+								Q_OBJECT
 				public:
 
-								static const int BRICKS_X = 10;            //-колво клеток горизонтально
-								static const int BRICKS_Y = 20;            //-колво клеток вертикально
+//								static const int BRICKS_X = 10;            //-колво клеток горизонтально
+//								static const int BRICKS_Y = 20;            //-колво клеток вертикально
 
-								static const int PW_START_X = 20;            //-начало прямоугольника стакана х
-								static const int PW_START_Y = 20;            //-начало прямоугольника стакана y
+//								static const int PW_START_X = 20;            //-начало прямоугольника стакана х
+//								static const int PW_START_Y = 20;            //-начало прямоугольника стакана y
 
-								static const int PW_FRAME_THICKNESS = 2;  //-толщина внешней рамки
-								static const int PW_FRAME_PADDING = 3;    //-пиксели между рамкой и внутри
+//								static const int PW_FRAME_THICKNESS = 2;  //-толщина внешней рамки
+//								static const int PW_FRAME_PADDING = 3;    //-пиксели между рамкой и внутри
 
-								static const int PW_BRICK_SIZE = 10;        //-размер клетки в пикселях
-								static const int PW_BRICK_PADDING = 2;     //-расстояние между клетками в пх
+//								static const int PW_BRICK_SIZE = 10;        //-размер клетки в пикселях
+//								static const int PW_BRICK_PADDING = 2;     //-расстояние между клетками в пх
 
 
 								static const int PW_WIDTH =
@@ -61,6 +62,7 @@ class RenderArea : public QWidget
 				private:
 								QColor mBackgroundColor = 0xb2b0aa;     //-custom light gray color
 
+								bool the_matrix[BRICKS_X][BRICKS_Y];
 //								TMatrix the_matrix;
 
 								//-test default matrix

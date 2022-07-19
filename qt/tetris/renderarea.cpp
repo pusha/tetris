@@ -10,11 +10,21 @@ RenderArea::RenderArea(QWidget *parent) :
 				//-enum	FocusPolicy { TabFocus, ClickFocus, StrongFocus, WheelFocus, NoFocus }
 				setFocusPolicy(Qt::StrongFocus);//-for both Tab and Click focus
 
-} //RenderArea::constructor()
+				//-let's initialize the matrix from global_constants.h
+				for (int j = 0; j < BRICKS_Y; j++)
+				{
+								for (int i = 0; i < BRICKS_X; i++)
+								{
+												this->the_matrix[i][j] = FAKE_MATRIX[i][j];
+								}
+				} //-for
 
+
+				std::cout << "cpp version is " << __cplusplus << std::endl;
+} //-RenderArea::constructor()
 
 //------------------------------------------------------------------------------
-QSize RenderArea :: minimumSizeHint() const
+QSize RenderArea::minimumSizeHint() const
 {
 				return QSize(450, 400);
 }
@@ -24,8 +34,6 @@ QSize RenderArea::sizeHint() const
 {
 				return QSize(450, 400);
 }
-
-
 
 //------------------------------------------------------------------------------
 void RenderArea::paintEvent(QPaintEvent *event)
@@ -63,8 +71,8 @@ void RenderArea::paintEvent(QPaintEvent *event)
 void RenderArea::drawBrick(QPainter *painter, const int i, const int j)
 {
 				//some inits
-				int START_X = PW_START_X + PW_FRAME_THICKNESS + PW_FRAME_PADDING;
-		int START_Y = PW_START_Y + PW_FRAME_THICKNESS + PW_FRAME_PADDING;
+				const int START_X = PW_START_X + PW_FRAME_THICKNESS + PW_FRAME_PADDING;
+				const int START_Y = PW_START_Y + PW_FRAME_THICKNESS + PW_FRAME_PADDING;
 
 		if(this->the_matrix[i][j])
 		{
@@ -91,8 +99,9 @@ void RenderArea::drawBrick(QPainter *painter, const int i, const int j)
 		}
 		else
 		{
+						//-do nothing
 		}
-} //drawBrick
+} //-drawBrick
 
 //------------------------------------------------------------------------------
 void RenderArea::drawPlayingWindow(QPainter *painter)
@@ -118,7 +127,7 @@ void RenderArea::drawPlayingWindow(QPainter *painter)
 		}
 
 		return;
-} //RenderArea::drawGameScreen
+} //-RenderArea::drawGameScreen
 
 
 //------------------------------------------------------------------------------

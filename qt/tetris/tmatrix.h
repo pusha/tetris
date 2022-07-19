@@ -1,7 +1,8 @@
 #ifndef TMATRIX_H
 #define TMATRIX_H
 
-#include<renderarea.h>
+#include"global_constants.h"
+//#include"renderarea.h"
 
 #include<iostream>
 
@@ -12,7 +13,7 @@ class TMatrix
 								void printMatrix();               //-control-prints the_matrix into alt+3
 
 				private:
-								bool arr[RenderArea::BRICKS_X][RenderArea::BRICKS_Y] = {
+								bool arr[BRICKS_X][BRICKS_Y] = {
 										/*top left*/
 										{1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0,},
 										{0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,},
