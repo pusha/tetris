@@ -12,13 +12,15 @@ SOURCES += \
 main.cpp \
 mainwindow.cpp \
 renderarea.cpp \
-	tmatrix.cpp
+	tmatrix.cpp \
+	tpiece.cpp
 
 HEADERS += \
 	global_constants.h \
 mainwindow.h \
 renderarea.h \
-	tmatrix.h
+	tmatrix.h \
+	tpiece.h
 
 FORMS += \
 mainwindow.ui

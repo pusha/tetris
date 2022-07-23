@@ -20,6 +20,9 @@ RenderArea::RenderArea(QWidget *parent) :
 				} //-for
 
 
+				TPiece the_piece(PieceType::PieceJ);
+//				the_piece.someAction(PieceType::PieceS);
+
 				std::cout << "cpp version is " << __cplusplus << std::endl;
 } //-RenderArea::constructor()
 

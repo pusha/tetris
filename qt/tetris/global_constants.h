@@ -14,6 +14,8 @@ const int PW_FRAME_PADDING = 3;    //-пиксели между рамкой и 
 const int PW_BRICK_SIZE = 10;        //-размер клетки в пикселях
 const int PW_BRICK_PADDING = 2;     //-расстояние между клетками в пх
 
+const bool ROTATE_CCW = true;
+
 const bool FAKE_MATRIX[BRICKS_X][BRICKS_Y] =
 {
 				/*top left*/
@@ -29,11 +31,5 @@ const bool FAKE_MATRIX[BRICKS_X][BRICKS_Y] =
 				{1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,},
 };                                              /*right bottom*/
 
-const bool PIECE_T[3][2] =
-{
-				{1, 0},
-				{1, 1},
-				{1, 0},
-};
 
 #endif // GLOBAL_CONSTANTS_H
