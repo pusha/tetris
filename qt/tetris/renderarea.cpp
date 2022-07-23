@@ -20,6 +20,7 @@ RenderArea::RenderArea(QWidget *parent) :
 				} //-for
 
 
+//				TPiece the_piece;
 				TPiece the_piece(PieceType::PieceJ);
 //				the_piece.someAction(PieceType::PieceS);
 

@@ -1,7 +1,7 @@
 #include "tpiece.h"
 
 //------------------------------------------------------------------------------
-TPiece::TPiece(PieceType ptp)
+TPiece::TPiece(const PieceType ptp)
 {
 				Q_UNUSED(ptp)
 

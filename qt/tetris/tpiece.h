@@ -165,7 +165,7 @@ class TPiece
 												},
 								}; //-I
 
-								TPiece(){std::cout << "TPiece constructor cannot be empty.";};
+								TPiece(){std::cerr << "TPiece constructor cannot be empty." << std::endl; };
 								TPiece(const PieceType);
 
 				private:
